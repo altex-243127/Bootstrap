@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejemplo 2</title>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+
+	
+	Fuente:<select id="fuente" onchange="impresion()">
+			<option value="Verdana">verdana</option>
+			<option value="Arial">arial</option>
+			<option value="Georgia">georgia</option>
+	</select>
+	Color: <input type="color" id="color" onchange="impresion()">
+	Nombre <input type="text" id="nombre" onkeyup="impresion()">
+	<p id="impreso"></p>
+	<script>
+		function impresion(){
+			var fuente = $('#fuente').val();
+			var color = $('#color').val();
+			var nombre = $('#nombre').val();
+
+			$('#impreso').html(nombre);
+			$('#impreso').css({"font-family":fuente, "font-size": "40px", "color":color});
+
+		}
+
+	
+	</script>
+
+</body>
+</html>
